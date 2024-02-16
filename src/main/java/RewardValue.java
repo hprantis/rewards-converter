@@ -2,6 +2,7 @@ public class RewardValue
 {
     private double cashValue;
     private int miles;
+    private static final double MILES_TO_CASH_CONVERSION = 0.0035;
 
     public RewardValue(double cashValue)
     {
@@ -17,7 +18,7 @@ public class RewardValue
     {
         if(this.miles != 0)
         {
-            return this.miles * 0.0035;
+            return this.miles * MILES_TO_CASH_CONVERSION;
         }
         else
         {
@@ -29,7 +30,7 @@ public class RewardValue
     {
         if(this.cashValue != 0)
         {
-            return this.cashValue / 0.0035;
+            return this.cashValue / MILES_TO_CASH_CONVERSION;
         }
         else
         {
